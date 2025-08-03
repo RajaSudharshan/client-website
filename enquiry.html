@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enquiry - MyProductSite</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Fixed Header / Navbar -->
+  <header class="navbar fixed-header">
+    <div class="container nav-flex">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enquiry.html" class="active">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Enquiry Form Section -->
+  <section class="enquiry-section">
+    <div class="container">
+      <div class="form-header">
+        <h2>Send Us an Enquiry</h2>
+        <p>We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+      </div>
+      
+      <form id="enquiryForm" class="enquiry-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required />
+          </div>
+          <div class="form-group">
+            <label for="product">Product of Interest</label>
+            <select id="product" name="product">
+              <option value="">Select a product...</option>
+              <optgroup label="Thermal Insulation">
+                <option value="Saint Gobain Rockwool">Saint Gobain Rockwool</option>
+                <option value="Pipe Sections">Pipe Sections</option>
+                <option value="Ceramic Blanket">Ceramic Blanket</option>
+                <option value="Loose Mineral Wool">Loose Mineral Wool</option>
+                <option value="Nitrile Rubber Insulation">Nitrile Rubber Insulation</option>
+                <option value="XLPE Thermal Insulation">XLPE Thermal Insulation</option>
+              </optgroup>
+              <optgroup label="Acoustic Insulation">
+                <option value="Saint Gobain Glasswool">Saint Gobain Glasswool</option>
+                <option value="Nitrile Open Cell">Nitrile Open Cell</option>
+                <option value="XLPE Open Cell">XLPE Open Cell</option>
+              </optgroup>
+              <optgroup label="Ramco Products">
+                <option value="Hilux Board">Hilux Board</option>
+                <option value="Cement Board">Cement Board</option>
+                <option value="Roofing Sheets">Roofing Sheets</option>
+              </optgroup>
+              <optgroup label="Ancillary Products">
+                <option value="Chicken Mesh">Chicken Mesh</option>
+                <option value="Wire Mesh">Wire Mesh</option>
+                <option value="Thermocol Pipe Sections">Thermocol Pipe Sections</option>
+                <option value="Puff Pipe Sections">Puff Pipe Sections</option>
+                <option value="Pidilite UV Lag Coating">Pidilite UV Lag Coating</option>
+                <option value="Pidilite Bijod">Pidilite Bijod</option>
+                <option value="Atul SR Adhesive">Atul SR Adhesive</option>
+                <option value="Fibre Glass Cloth">Fibre Glass Cloth</option>
+                <option value="Fibre Glass RP Tissue">Fibre Glass RP Tissue</option>
+                <option value="Reinforced 5.5 Alufoil Mesh Tape">Reinforced 5.5 Alufoil Mesh Tape</option>
+                <option value="Synthetic Tape">Synthetic Tape</option>
+                <option value="Self Adhesive Tape">Self Adhesive Tape</option>
+                <option value="Gascut Tape">Gascut Tape</option>
+                <option value="Plastic Washer for Underdeck Insulation">Plastic Washer for Underdeck Insulation</option>
+                <option value="ITW Rustlick 631">ITW Rustlick 631</option>
+                <option value="WD40">WD40</option>
+                <option value="General Purpose Resin">General Purpose Resin</option>
+                <option value="General Purpose UV Sealant">General Purpose UV Sealant</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group full-width">
+          <label for="message">Your Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us about your requirements..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">
+          <span>Submit Enquiry</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="m9 18 6-6-6-6"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>&copy; 2025 Aanandhi Agencies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS to handle Google Apps Script Submission -->
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycby4BXLkvtcsPhirjNJ3CLi0D701QYOuPBkkq8uhVl6AXecccCaxPxe6gddbUl1SjFxpJA/exec"; // Replace with actual URL
+    const form = document.getElementById("enquiryForm");
+
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: new FormData(form)
+      })
+      .then(response => {
+        alert("Enquiry submitted successfully!");
+        form.reset();
+      })
+      .catch(error => {
+        console.error("Error!", error.message);
+        alert("Failed to submit. Please try again later.");
+      });
+    });
+  </script>
+
+</body>
+</html>

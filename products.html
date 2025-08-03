@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Aanandhi Agencies</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar fixed-header">
+    <div class="container nav-flex">
+      <img src="assets/logo.png" alt="Logo" class="logo" />
+      <nav>
+        <ul class="nav-links">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Products Hero Section -->
+  <section class="products-hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Our Products</h1>
+        <p>Comprehensive range of glass and hardware solutions for construction and industrial applications</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Categories -->
+  <section class="products-content">
+    <div class="container">
+      
+      <!-- Category Filter -->
+      <div class="category-filter">
+        <button class="filter-btn active" data-category="all">All Products</button>
+        <button class="filter-btn" data-category="thermal">Thermal Insulation</button>
+        <button class="filter-btn" data-category="acoustic">Acoustic Insulation</button>
+        <button class="filter-btn" data-category="ramco">Ramco Products</button>
+        <button class="filter-btn" data-category="ancillary">Ancillary Products</button>
+      </div>
+
+      <!-- Thermal Insulation -->
+      <div class="product-category" data-category="thermal">
+        <div class="category-header">
+          <h2>Thermal Insulation</h2>
+          <p>Energy-efficient insulation solutions for optimal temperature control</p>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/rockwool2.jpg" alt="Saint Gobain Rockwool">
+              <div class="product-badge">Popular</div>
+            </div>
+            <div class="product-details">
+              <h3>Saint Gobain Rockwool</h3>
+              <p>Premium fire-resistant, energy-efficient insulation for walls, roofs & ducts with excellent thermal performance.</p>
+              <div class="product-specs">
+                <span class="spec-item">Fire Resistant</span>
+                <span class="spec-item">Energy Efficient</span>
+                <span class="spec-item">Premium Brand</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('saint-gobain-rockwool')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/pipe-section.jpg" alt="Pipe Sections">
+            </div>
+            <div class="product-details">
+              <h3>Pipe Sections</h3>
+              <p>Pre-formed insulation sections for pipes, providing excellent thermal protection and energy efficiency.</p>
+              <div class="product-specs">
+                <span class="spec-item">Pre-formed</span>
+                <span class="spec-item">Easy Install</span>
+                <span class="spec-item">Thermal Protection</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('pipe-sections')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/ceramic-blanket.jpg" alt="Ceramic Blanket">
+            </div>
+            <div class="product-details">
+              <h3>Ceramic Blanket</h3>
+              <p>High-temperature ceramic fiber blanket for extreme heat applications and industrial furnaces.</p>
+              <div class="product-specs">
+                <span class="spec-item">High Temperature</span>
+                <span class="spec-item">Ceramic Fiber</span>
+                <span class="spec-item">Industrial Grade</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('ceramic-blanket')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/mineral-wool.webp" alt="Loose Mineral Wool">
+            </div>
+            <div class="product-details">
+              <h3>Loose Mineral Wool</h3>
+              <p>Loose-fill mineral wool insulation for cavity walls and irregular spaces requiring thermal protection.</p>
+              <div class="product-specs">
+                <span class="spec-item">Loose Fill</span>
+                <span class="spec-item">Cavity Insulation</span>
+                <span class="spec-item">Flexible Application</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('loose-mineral-wool')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/nitrile_rubber.jpg" alt="Nitrile Rubber Insulation">
+            </div>
+            <div class="product-details">
+              <h3>Nitrile Rubber Insulation</h3>
+              <p>Flexible nitrile rubber insulation for HVAC systems and refrigeration applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Flexible</span>
+                <span class="spec-item">HVAC Systems</span>
+                <span class="spec-item">Refrigeration</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('nitrile-rubber')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/xlpe-thermal.jpg" alt="XLPE Thermal Insulation">
+            </div>
+            <div class="product-details">
+              <h3>XLPE Thermal Insulation</h3>
+              <p>Cross-linked polyethylene thermal insulation for superior performance and durability.</p>
+              <div class="product-specs">
+                <span class="spec-item">Cross-linked</span>
+                <span class="spec-item">Superior Performance</span>
+                <span class="spec-item">Durable</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('xlpe-thermal')">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Acoustic Insulation -->
+      <div class="product-category" data-category="acoustic">
+        <div class="category-header">
+          <h2>Acoustic Insulation</h2>
+          <p>Professional sound control solutions for optimal acoustic environments</p>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/glasswool.webp" alt="Saint Gobain Glasswool">
+              <div class="product-badge">Premium</div>
+            </div>
+            <div class="product-details">
+              <h3>Saint Gobain Glasswool</h3>
+              <p>Premium glasswool insulation providing excellent acoustic and thermal performance for buildings.</p>
+              <div class="product-specs">
+                <span class="spec-item">Sound Absorption</span>
+                <span class="spec-item">Thermal Control</span>
+                <span class="spec-item">Premium Brand</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('saint-gobain-glasswool')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/nitrile-open-cells.jpg" alt="Nitrile Open Cell">
+            </div>
+            <div class="product-details">
+              <h3>Nitrile Open Cell</h3>
+              <p>Open cell nitrile foam for acoustic applications requiring sound absorption and vibration dampening.</p>
+              <div class="product-specs">
+                <span class="spec-item">Open Cell</span>
+                <span class="spec-item">Sound Absorption</span>
+                <span class="spec-item">Vibration Dampening</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('nitrile-open-cell')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/xlpe-open-cell.jpg" alt="XLPE Open Cell">
+            </div>
+            <div class="product-details">
+              <h3>XLPE Open Cell</h3>
+              <p>Cross-linked polyethylene open cell foam for acoustic insulation and sound control applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Cross-linked</span>
+                <span class="spec-item">Open Cell</span>
+                <span class="spec-item">Sound Control</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('xlpe-open-cell')">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ramco Products -->
+      <div class="product-category" data-category="ramco">
+        <div class="category-header">
+          <h2>Ramco Products</h2>
+          <p>Quality construction materials from Ramco for building and roofing applications</p>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/hilux_board.webp" alt="Hilux Board">
+              <div class="product-badge">Popular</div>
+            </div>
+            <div class="product-details">
+              <h3>Hilux Board</h3>
+              <p>High-quality fiber cement boards for interior and exterior construction applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Fiber Cement</span>
+                <span class="spec-item">Interior/Exterior</span>
+                <span class="spec-item">High Quality</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('hilux-board')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/cement-boards.webp" alt="Cement Board">
+            </div>
+            <div class="product-details">
+              <h3>Cement Board</h3>
+              <p>Durable cement boards for construction, partitioning, and structural applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Durable</span>
+                <span class="spec-item">Construction Grade</span>
+                <span class="spec-item">Structural</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('cement-board')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/roofing-sheets.webp" alt="Roofing Sheets">
+            </div>
+            <div class="product-details">
+              <h3>Roofing Sheets</h3>
+              <p>Weather-resistant roofing sheets for residential and commercial roofing applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Weather Resistant</span>
+                <span class="spec-item">Residential/Commercial</span>
+                <span class="spec-item">Long Lasting</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('roofing-sheets')">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ancillary Products -->
+      <div class="product-category" data-category="ancillary">
+        <div class="category-header">
+          <h2>Ancillary Products</h2>
+          <p>Essential accessories and materials for complete insulation and construction solutions</p>
+        </div>
+        
+        <div class="products-grid">
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/chicken_mesh.jpg" alt="Chicken Mesh">
+            </div>
+            <div class="product-details">
+              <h3>Chicken Mesh</h3>
+              <p>Galvanized chicken mesh for reinforcement and protection applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Galvanized</span>
+                <span class="spec-item">Reinforcement</span>
+                <span class="spec-item">Protection</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('chicken-mesh')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/wire_mesh.jpg" alt="Wire Mesh">
+            </div>
+            <div class="product-details">
+              <h3>Wire Mesh</h3>
+              <p>Heavy-duty wire mesh for industrial and construction reinforcement applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Heavy Duty</span>
+                <span class="spec-item">Industrial Grade</span>
+                <span class="spec-item">Reinforcement</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('wire-mesh')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/thermocol-pipe-section.jpg" alt="Thermocol Pipe Sections">
+            </div>
+            <div class="product-details">
+              <h3>Thermocol Pipe Sections</h3>
+              <p>Lightweight thermocol pipe insulation sections for thermal protection.</p>
+              <div class="product-specs">
+                <span class="spec-item">Lightweight</span>
+                <span class="spec-item">Thermal Protection</span>
+                <span class="spec-item">Easy Install</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('thermocol-pipe')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/puf-pipe-section.webp" alt="Puff Pipe Sections">
+            </div>
+            <div class="product-details">
+              <h3>Puff Pipe Sections</h3>
+              <p>Expanded polystyrene pipe sections for insulation applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Expanded Polystyrene</span>
+                <span class="spec-item">Insulation</span>
+                <span class="spec-item">Cost Effective</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('puff-pipe')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/pidilite_uv_lag.webp" alt="Pidilite UV Lag Coating">
+            </div>
+            <div class="product-details">
+              <h3>Pidilite UV Lag Coating</h3>
+              <p>UV-resistant coating for exterior insulation protection and weatherproofing.</p>
+              <div class="product-specs">
+                <span class="spec-item">UV Resistant</span>
+                <span class="spec-item">Weatherproof</span>
+                <span class="spec-item">Exterior Protection</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('pidilite-uv')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/pidilite_bejod.jpg" alt="Pidilite Bijod">
+            </div>
+            <div class="product-details">
+              <h3>Pidilite Bejod</h3>
+              <p>High-performance adhesive solution for industrial and construction applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">High Performance</span>
+                <span class="spec-item">Industrial Grade</span>
+                <span class="spec-item">Strong Bond</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('pidilite-bijod')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/Polygrip-Rapid.png" alt="Atul SR Adhesive">
+            </div>
+            <div class="product-details">
+              <h3>Atul SR Adhesive</h3>
+              <p>Specialized adhesive for insulation and construction bonding applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Specialized</span>
+                <span class="spec-item">Insulation Bonding</span>
+                <span class="spec-item">Construction Grade</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('atul-sr')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/fibreglass_cloth.webp" alt="Fibre Glass Cloth">
+            </div>
+            <div class="product-details">
+              <h3>Fibre Glass Cloth</h3>
+              <p>High-strength fiberglass cloth for reinforcement and composite applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">High Strength</span>
+                <span class="spec-item">Reinforcement</span>
+                <span class="spec-item">Composite</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('fiberglass-cloth')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/fibreglass_rp_tissue.webp" alt="Fibre Glass RP Tissue">
+            </div>
+            <div class="product-details">
+              <h3>Fibre Glass RP Tissue</h3>
+              <p>Reinforced plastic tissue for composite manufacturing and repair applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Reinforced Plastic</span>
+                <span class="spec-item">Composite Manufacturing</span>
+                <span class="spec-item">Repair Applications</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('fiberglass-tissue')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/alufoil_mesh_tape.webp" alt="Reinforced Alufoil Mesh Tape">
+            </div>
+            <div class="product-details">
+              <h3>Reinforced 5.5 Alufoil Mesh Tape</h3>
+              <p>Heavy-duty aluminum foil mesh tape for sealing and insulation applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Heavy Duty</span>
+                <span class="spec-item">Sealing</span>
+                <span class="spec-item">Insulation</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('alufoil-tape')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/synthetic-tape.jpg" alt="Synthetic Tape">
+            </div>
+            <div class="product-details">
+              <h3>Synthetic Tape</h3>
+              <p>Durable synthetic tape for general purpose sealing and binding applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Durable</span>
+                <span class="spec-item">General Purpose</span>
+                <span class="spec-item">Sealing & Binding</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('synthetic-tape')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/self-adhesive-tape.jpg" alt="Self Adhesive Tape">
+            </div>
+            <div class="product-details">
+              <h3>Self Adhesive Tape</h3>
+              <p>Easy-to-use self-adhesive tape for quick sealing and repair applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Easy to Use</span>
+                <span class="spec-item">Quick Sealing</span>
+                <span class="spec-item">Repair Applications</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('self-adhesive-tape')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/gasket_tape.jpg" alt="Gascut Tape">
+            </div>
+            <div class="product-details">
+              <h3>Gascut Tape</h3>
+              <p>Specialized tape for gas line sealing and industrial applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Specialized</span>
+                <span class="spec-item">Gas Line Sealing</span>
+                <span class="spec-item">Industrial</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('gascut-tape')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/plastic-washer.jpg" alt="Plastic Washer">
+            </div>
+            <div class="product-details">
+              <h3>Plastic Washer for Underdeck Insulation</h3>
+              <p>Specialized plastic washers for securing underdeck insulation systems.</p>
+              <div class="product-specs">
+                <span class="spec-item">Specialized</span>
+                <span class="spec-item">Underdeck Insulation</span>
+                <span class="spec-item">Securing System</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('plastic-washer')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/itw_rustlick_631.jpg" alt="ITW Rustlick 631">
+            </div>
+            <div class="product-details">
+              <h3>ITW Rustlick 631</h3>
+              <p>Professional rust prevention and lubrication solution for industrial applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Rust Prevention</span>
+                <span class="spec-item">Lubrication</span>
+                <span class="spec-item">Industrial Grade</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('itw-rustlick')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/WD-40.png" alt="WD40">
+            </div>
+            <div class="product-details">
+              <h3>WD40</h3>
+              <p>Multi-purpose penetrating oil and water-displacing spray for maintenance applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Multi-purpose</span>
+                <span class="spec-item">Penetrating Oil</span>
+                <span class="spec-item">Maintenance</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('wd40')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/general-resin.png" alt="General Purpose Resin">
+            </div>
+            <div class="product-details">
+              <h3>General Purpose Resin</h3>
+              <p>Versatile resin for composite manufacturing and repair applications.</p>
+              <div class="product-specs">
+                <span class="spec-item">Versatile</span>
+                <span class="spec-item">Composite Manufacturing</span>
+                <span class="spec-item">Repair Applications</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('general-resin')">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-item">
+            <div class="product-image">
+              <img src="assets/uv-sealant.jpg" alt="General Purpose UV Sealant">
+            </div>
+            <div class="product-details">
+              <h3>General Purpose UV Sealant</h3>
+              <p>UV-resistant sealant for exterior applications and weatherproofing.</p>
+              <div class="product-specs">
+                <span class="spec-item">UV Resistant</span>
+                <span class="spec-item">Exterior Applications</span>
+                <span class="spec-item">Weatherproofing</span>
+              </div>
+              <div class="product-actions">
+                <a href="enquiry.html" class="btn-primary">Get Quote</a>
+                <button class="btn-secondary" onclick="showDetails('uv-sealant')">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="products-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Need Custom Solutions?</h2>
+        <p>Our experts can help you find the perfect products for your specific requirements</p>
+        <div class="cta-actions">
+          <a href="enquiry.html" class="btn">Get Custom Quote</a>
+          <a href="contact.html" class="btn-secondary">Speak to Expert</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>&copy; 2025 Aanandhi Agencies. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Category Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const categories = document.querySelectorAll('.product-category');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const category = btn.dataset.category;
+        
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        categories.forEach(cat => {
+          if (category === 'all' || cat.dataset.category === category) {
+            cat.style.display = 'block';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    function showDetails(product) {
+      alert(`Detailed information for ${product} - Contact us for specifications and pricing.`);
+    }
+  </script>
+
+</body>
+</html>
