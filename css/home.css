@@ -869,11 +869,85 @@ form textarea:focus {
   font-weight: 600;
 }
 
-.map-container {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+.map-location {
+  display: block;
+  padding: 1.5rem 2rem;
+  background: white;
   border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.map-embed {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 45vw, 400px);
+  border: 0;
+  border-radius: 10px;
+}
+
+.map-location-details-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.map-location-icon {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex: 0 0 3.5rem;
+  color: white;
+  background: var(--primary-blue);
+  border-radius: 50%;
+}
+
+.map-location-details {
+  flex: 1;
+}
+
+.map-location-details h3 {
+  margin-bottom: 0.4rem;
+  color: var(--primary-blue);
+  font-size: 1.15rem;
+}
+
+.map-location-details p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.map-location-link {
+  padding: 0.75rem 1rem;
+  color: white;
+  background: var(--primary-blue);
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+
+.map-location-link:hover {
+  background: var(--hover-blue);
+}
+
+@media (max-width: 600px) {
+  .map-location-details-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .map-location-link {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.map-location-link:focus-visible {
+  outline: 3px solid #93c5fd;
+  outline-offset: 3px;
 }
 
 @media (max-width: 768px) {
