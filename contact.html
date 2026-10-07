@@ -153,7 +153,7 @@
         <!-- Contact Form -->
         <div class="contact-form-card">
           <h2>Send us a Message</h2>
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycby4BXLkvtcsPhirjNJ3CLi0D701QYOuPBkkq8uhVl6AXecccCaxPxe6gddbUl1SjFxpJA/exec" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label for="contact-name">Name *</label>
@@ -183,6 +183,30 @@
         </div>
       </div>
       
+      <script>
+        const contactScriptURL = "https://script.google.com/macros/s/AKfycby4BXLkvtcsPhirjNJ3CLi0D701QYOuPBkkq8uhVl6AXecccCaxPxe6gddbUl1SjFxpJA/exec";
+        const contactForm = document.getElementById("contactForm");
+
+        if (contactForm) {
+          contactForm.addEventListener("submit", e => {
+            e.preventDefault();
+
+            fetch(contactScriptURL, {
+              method: "POST",
+              body: new FormData(contactForm)
+            })
+            .then(response => {
+              alert("Message sent successfully!");
+              contactForm.reset();
+            })
+            .catch(error => {
+              console.error("Error!", error.message);
+              alert("Failed to send your message. Please try again later.");
+            });
+          });
+        }
+      </script>
+
       <!-- Map Section -->
       <div class="map-section">
         <h2>Find Us</h2>
